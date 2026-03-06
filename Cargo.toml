@@ -1,5 +1,5 @@
 [package]
-name = "cargo-preflight"
+name = "cargo-build-inspector"
 version = "0.1.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
@@ -7,7 +7,7 @@ description = "A cargo subcommand that performs static pre-build analysis of bui
 repository = "https://github.com/Philamentous/cargo-preflight"
 
 [[bin]]
-name = "cargo-preflight"
+name = "cargo-build-inspector"
 path = "src/main.rs"
 
 [dependencies]

@@ -8,8 +8,8 @@ mod scanner;
 
 #[derive(Parser, Debug)]
 #[command(
-    name = "cargo-preflight",
-    bin_name = "cargo preflight",
+    name = "cargo-build-inspector",
+    bin_name = "cargo build-inspector",
     version = env!("CARGO_PKG_VERSION"),
     about = "Static pre-build analysis of dependency build scripts and proc-macros"
 )]
@@ -27,7 +27,7 @@ struct Cli {
     verbose: bool,
 
     // Hidden subcommand arg that cargo passes
-    #[arg(hide = true, default_value = "preflight")]
+    #[arg(hide = true, default_value = "build-inspector")]
     _subcmd: String,
 }
 
@@ -100,7 +100,7 @@ fn print_results(results: &[scanner::ScanResult], verbose: bool) -> bool {
 
     println!(
         "\n{}",
-        "cargo-preflight: Pre-build dependency analysis"
+        "cargo-build-inspector: Pre-build dependency analysis"
             .bold()
             .underline()
     );
