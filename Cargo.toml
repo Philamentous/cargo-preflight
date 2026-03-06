@@ -1,0 +1,18 @@
+[package]
+name = "cargo-preflight"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "A cargo subcommand that performs static pre-build analysis of build.rs and proc-macro source code to identify potentially dangerous capabilities before building"
+repository = "https://github.com/Philamentous/cargo-preflight"
+
+[[bin]]
+name = "cargo-preflight"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+colored = "2"
+regex = "1"
